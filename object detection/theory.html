@@ -11,3 +11,25 @@ OS separates the distinct objects in an image on a pixel level.
 Although OS gives more information we prefer OD since it is less computationally expensive.
 
 <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/22606/images/thmCo8t0TV69UrM6WL3i_720Image_detection_vs_segmentation.jpg">
+
+## History
+It was started in the 1970. First it was based on edges and corners. The first od was developed in Viola Jones in 2001 it used sliding windows.
+Next we used it for face detection in smart phones and cameras. 
+Histogram of oriented gradients was another method released in 2005 that focus on the shape of object it worked by extracting the gradient and orientation
+of the edges was used to detect images in the images.
+Then AI came up with neural network 
+
+## Performence metrics
+1. how good is the location and 2. how good is the classification
+for localization we use IoU and mAP for classification.
+
+IoU(Intersection Over Union):
+It tells us how close the predicted bounding box to the original, it's a value between 0 and 1 if there is some overlap. If 1 it is then it is a perfect detection.
+If there is no overlap it is 0. 
+IoU is the ration between the area of intersection and area of the union of bounding boxes
+
+Average Precision:
+Precision: Actual positive of the tot positive predictions. TP/(TP+FP)
+Recall: Actual positives out of all predictions. TP/(TP+FN)
+Since both values provide valuable info we combine them and call Avergae precision.
+ap for a single class and for multiple classes it is mean average precision(mAP).
